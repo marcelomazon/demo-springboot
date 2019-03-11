@@ -13,6 +13,7 @@ public class AlunoDeleteController {
 
     @ResponseBody
     public String deleteAluno(@PathVariable("idAluno") String numeroMatricula){
+        System.out.println("aluno deletado: "+numeroMatricula);
         return MatriculaAluno.getInstance().deleteAluno(numeroMatricula);
     }
 }

@@ -15,6 +15,7 @@ public class AlunoUpdateController {
     @ResponseBody
 
     public String updateAluno(@RequestBody Aluno aluno){
+        System.out.print("aluno atualizado: "+aluno.getNumeroMatricula());
         return MatriculaAluno.getInstance().updateAluno(aluno);
     }
 
