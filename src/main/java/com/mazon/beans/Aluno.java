@@ -1,5 +1,7 @@
 package com.mazon.beans;
 
+import java.util.Objects;
+
 public class Aluno {
     String nome;
     String numeroMatricula;
@@ -27,5 +29,19 @@ public class Aluno {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Aluno)) return false;
+        Aluno aluno = (Aluno) o;
+        return idade == aluno.idade &&
+                numeroMatricula.equals(aluno.numeroMatricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numeroMatricula, idade);
     }
 }

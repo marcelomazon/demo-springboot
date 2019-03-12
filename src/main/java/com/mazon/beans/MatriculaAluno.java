@@ -31,7 +31,7 @@ public class MatriculaAluno {
             Aluno stdn = listaAluno.get(i);
             if (stdn.getNumeroMatricula().equals(std.getNumeroMatricula())){
                 listaAluno.set(i,std);
-                return "update matricula: "+std.getNumeroMatricula();
+                return "atualizado matricula: "+std.getNumeroMatricula();
             }
         }
         return "Falha na atualização";
@@ -42,7 +42,7 @@ public class MatriculaAluno {
             Aluno stdn = listaAluno.get(i);
             if (stdn.getNumeroMatricula().equals(matricula)){
                 listaAluno.remove(i);
-                return "delete matricula: "+matricula;
+                return "deletado matricula: "+matricula;
             }
         }
         return "Falha na exclusão";

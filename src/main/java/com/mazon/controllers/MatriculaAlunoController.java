@@ -18,7 +18,7 @@ public class MatriculaAlunoController {
     @ResponseBody
     public MatriculaAlunoReply registerStudent(@RequestBody Aluno student) {
         this.student = student;
-        System.out.println("Matricula aluno");
+        System.out.println("Matricula aluno: "+student.getNumeroMatricula());
         MatriculaAlunoReply stdregreply = new MatriculaAlunoReply();
         MatriculaAluno.getInstance().add(student);
         //We are setting the below value just to reply a message back to the caller
